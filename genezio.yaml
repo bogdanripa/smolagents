@@ -1,13 +1,13 @@
-name: smolagent
-region: us-east-1
-yamlVersion: 2
 backend:
-  path: .
-  language:
-    name: python
-    runtime: python3.13.x
-  functions:
-    - name: smolagent
-      path: .
-      entry: genezio.py
-      handler: handler
+    functions:
+        - entry: genezio.py
+          handler: handler
+          name: smolagent
+          path: .
+    language:
+        name: python
+        runtime: python3.13.x
+    path: .
+name: smolagent
+region: eu-west-1
+yamlVersion: 2
